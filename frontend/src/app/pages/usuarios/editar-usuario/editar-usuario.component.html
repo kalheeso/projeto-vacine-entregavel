@@ -1,0 +1,56 @@
+<div class="form">
+  <form [formGroup]="form">
+    <div class="formrow">
+      <div style="display: flex; flex-direction: column;">
+        <label>Nome</label>
+        <input pInputText formControlName="nome" [style]="{'width': '12vw'}" />
+      </div>
+
+      <div style="display: flex; flex-direction: column; margin-left: 2vh">
+        <label>Data de Nascimento</label>
+        <p-calendar [autofocus]="false" [style]="{'width': '10vw'}" [showIcon]="true" formControlName="dataNascimento" dateFormat="dd/mm/yy"/>
+      </div>
+
+      <div style="display: flex; flex-direction: column; margin-left: 2vh">
+        <label>Sexo</label>
+        <p-dropdown [options]="sexos" formControlName="sexo" [style]="{'width': '5vw'}" />
+      </div>
+
+      <div style="display: flex; flex-direction: column; margin-left: 2vh">
+        <label>Alergias</label>
+        <p-multiSelect formControlName="alergias" optionLabel="nome" [options]="alergias" [style]="{'width': '10vw'}"/>
+      </div>
+    </div>
+
+    <div class="formrow">
+      <div style="display: flex; flex-direction: column;">
+        <label>UF</label>
+        <p-dropdown [options]="ufs" formControlName="uf" [style]="{'width': '4vw'}"/>
+      </div>
+
+      <div style="display: flex; flex-direction: column;">
+        <label>Cidade</label>
+        <input pInputText formControlName="cidade" [style]="{'width': '10vw'}"/>
+      </div>
+
+      <div style="display: flex; flex-direction: column;">
+        <label>Setor</label>
+        <input pInputText formControlName="setor" [style]="{'width': '7vw'}"/>
+      </div>
+
+      <div style="display: flex; flex-direction: column;">
+        <label>Logradouro</label>
+        <input pInputText formControlName="logradouro" [style]="{'width': '15vw'}"/>
+      </div>
+
+      <div style="display: flex; flex-direction: column;">
+        <label>N.º</label>
+        <p-inputNumber formControlName="numero" [inputStyle]="{'width': '3vw'}" [style]="{'width': '3vw'}"/>
+      </div>
+    </div>
+
+    <p-button [style]="{'width': '15vw', 'display':'flex', 'justify-content':'center', 'margin-top':'15vh'}" (click)="cadastrarUsuario()">
+      <span>{{config.data ? 'Salvar':'Cadastrar'}}</span>
+    </p-button>
+  </form>
+</div>

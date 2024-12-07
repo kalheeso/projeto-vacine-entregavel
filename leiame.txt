@@ -1,0 +1,33 @@
+Alunos: Felipe Moreira, Lucas Bernardes, Matheus Geraldino
+
+# Trabalho final: Vacine
+
+Nós estamos utilizando o Spring Boot como framework no back e utilizamos o node no front para o trabalho
+e optamos por hospedar o banco de dados para que todo mundo conseguisse utilizar o mesmo durante o desenvolvimento
+e testes.
+
+URL: jdbc:postgresql://db-postgresql-vacine-do-user-18352021-0.d.db.ondigitalocean.com:25060
+USER: api_projeto_vacine
+PASSWORD: api123
+
+Obs.: Estamos enviando no .zip do código já o application.properties utilizado, então para testar
+não é necessário atualizar as credencias e o usuário já está com todas as permissões necessárias.
+Optamos também por não mostrar muito o código e as atualizações no banco de dados durante o vídeo
+para não ultrapassar tanto o limite de tempo.
+
+**O banco ficará up até o dia 20/12/2024**
+
+## Pré-requisitos
+- Java 17
+- Node 22 LTS (utilizar o npm install para dependencias)
+- Maven
+
+## Executar localmente
+
+Para rodar o back é simplesmente rodar a classe ProjetoVacineApplication e a api será iniciada.
+
+## Nova funcionalidade
+
+Para nossa nova funcionalidade optamos por fazer a parte de login com autenticação JWT (mostrado no vídeo),
+e para isso fizemos uma alteração no banco de dados, mas apenas adicionando uma nova tabela (conta).
+

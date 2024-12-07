@@ -1,0 +1,24 @@
+.login-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+}
+
+.fields{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 15vw;
+}
+
+.registerLink{
+  margin-top: 1vh
+}
+
+.registerLink:hover{
+  cursor: pointer;
+  color: #FFD54F;
+  transition: 0.3s;
+}
